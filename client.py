@@ -42,7 +42,12 @@ def getRatio(price_a, price_b):
 	""" Get ratio of price_a and price_b """
 	""" ------------- Update this function ------------- """
 	""" Also create some unit tests for this function in client_test.py """
-	return 1
+	try:
+		return price_a / price_b
+		
+	except Exception as ZeroDivisionError:
+		print("ZeroDivisionError")
+		return
 
 # Main
 if __name__ == "__main__":
